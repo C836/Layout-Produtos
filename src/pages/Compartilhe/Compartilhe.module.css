@@ -1,0 +1,56 @@
+.Compartilhe{
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica-light;
+    text-align: center;
+}
+
+.Compartilhe form{
+    margin-bottom: 40px;
+}
+
+.Compartilhe form fieldset div, .Compartilhe form{
+    text-align: start;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica-light;
+}
+
+.Compartilhe form fieldset{
+    border: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.Compartilhe form fieldset input{
+    margin: 0;
+    margin-right: 6px;
+    margin-bottom: 20px;
+    padding: 4px;
+    font: 1.1rem Helvetica-light;
+    border: 1px solid black;
+}
+
+.Compartilhe form fieldset label{
+    margin: 6px 0;
+    margin-right: 15%;
+}
+
+@media(min-width: 875px){
+    .Compartilhe form fieldset{
+        display: flex;
+        flex-direction: row;
+        justify-content: center
+    }
+
+    .Compartilhe form fieldset div{
+        width: 40%;
+        margin: 20px;
+    }
+
+    .Compartilhe button{
+        width: 50%;
+        align-self: center;
+    }
+}

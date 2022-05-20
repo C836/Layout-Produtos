@@ -1,0 +1,28 @@
+.Footer {
+  color: rgb(255, 255, 255);
+  z-index: 5;
+  font: 1rem Helvetica-light;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+
+  height: 250px;
+  width: 100%;
+  background-color: rgb(68, 27, 95);
+
+  clip-path: polygon(0% 20%, 0% 100%, 100% 100%, 100% 0%);
+
+  display: grid;
+  align-content: center;
+
+  color: white;
+}
+
+.Footer p:first-of-type {
+  margin-top: 50px;
+}
+
+.Footer p {
+  margin: 7px;
+}

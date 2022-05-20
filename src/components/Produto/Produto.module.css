@@ -1,5 +1,5 @@
 .Produto{
-    height: 240px;
+    height: 300px;
     box-sizing: border-box;
 }
 
@@ -9,12 +9,13 @@
     height: 100%;
     margin: 0;
     float: left;
+    margin-bottom: 10px;
 }
 
 .Produto figure img{
     width: calc(100% - 30px);
     height: 100%;
-    object-fit: contain
+    object-fit: contain;
 }
 
 .Produto ul{
@@ -42,4 +43,21 @@
 
 .Produto ul button{
     width: 100%;
+}
+
+@media(min-width: 875px){
+    .Produto{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Produto ul{
+        width: 100%;
+    }
+
+    .Produto figure{
+        float: none;
+        width: 100%;
+    }
 }

@@ -18,6 +18,9 @@ export default function Produto(props){
                     </h2>
                 </li>
                 <li>
+                    {props.descricao}
+                </li>
+                <li>
                     De: R${props.preco[0]}
                 </li>
                 <li>

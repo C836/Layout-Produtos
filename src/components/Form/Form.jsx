@@ -1,9 +1,9 @@
-import styles from './AjudaForm.module.css'
+import styles from './Form.module.css'
 import Button from '../Button/Button'
 
-export default function AjudaForm(){
+export default function Form(){
     return(
-        <form>
+        <form className={styles.Form}>
             <label for="nome">
                 Seu nome
             </label>

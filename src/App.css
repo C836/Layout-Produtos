@@ -5,9 +5,23 @@
 }
 
 .App{
-    padding: 20px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
+
+.App main{
+    padding: 20px;
+    align-self: center;
+    max-width: 1200px;
+    z-index: 1;
+}
+
+@media(min-width: 875px){
+    .App main{
+        padding: 80px;
+    }
+}
+
 
 @font-face {
     font-family: 'Helvetica-light';

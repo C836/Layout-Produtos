@@ -1,18 +1,18 @@
 header{
     color: white;
     margin-top: 40px;
-    position: relative;
+
 }
 
 header .Background{
-    width: 400%;
-    position: absolute;
-    left: -100px;
+    width: 100%;
+    height: 1000px;
+    left: 0;
+    top: -650px;
     z-index: -1;
-    height: 480px;
-    border-radius: 0 0 100% 100%;
-    background-color: rgb(68, 27, 95);
-    margin-top:-130px;
+    position: absolute;
+    transform: skewY(5deg);
+    background: rgb(68, 27, 95);
 }
 
 header article h2{
@@ -78,4 +78,48 @@ header nav{
     font: 1rem Helvetica-light;
     line-height: 1.4rem;
     margin: 0;
+}
+
+@media(min-width: 875px){
+    header{
+        text-align: center;
+    }
+
+    header article h2{
+        font: 2rem Helvetica-light
+    }
+    
+    header article h1{
+        font: 4rem Helvetica-bold;
+    }
+    
+    header article p{
+        font: 1.2rem Helvetica-light;
+        margin: 25px 0 20px 0;
+    }
+
+    header .Background{
+        height: 1200px;
+    }
+
+    header nav{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .expanse{
+        width: 55%;
+        margin: 150px 5% 30px 0;
+        display: inline-block;
+    }
+
+    .expanse h2{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 25px;
+        font: 2rem Helvetica-light;
+    }
+
+    .expanse img{
+        display: none;
+    }
 }
