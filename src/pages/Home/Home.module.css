@@ -1,0 +1,81 @@
+header{
+    color: white;
+    margin-top: 40px;
+    position: relative;
+}
+
+header .Background{
+    width: 400%;
+    position: absolute;
+    left: -100px;
+    z-index: -1;
+    height: 480px;
+    border-radius: 0 0 100% 100%;
+    background-color: rgb(68, 27, 95);
+    margin-top:-130px;
+}
+
+header article h2{
+    margin: 5px 0;
+    font: clamp(1rem, 5vw, 100px) Helvetica-light
+}
+
+header article h1{
+    width: 100%;
+    font: clamp(35px, 9vw, 100px) Helvetica-bold;
+    margin: 10px 0;
+}
+
+header article p{
+    width: 100%;
+    font: 1rem Helvetica-light;
+    margin: 10px 0 35px 0;
+}
+
+header nav{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2;
+    gap: 1.2rem;
+
+    padding: 5%;
+}
+
+.expanse{
+    color: rgb(80, 80, 80);
+}
+
+.expanse > summary {
+    list-style: none;
+}
+
+.open{
+    transform: translateY(5px);
+    transition: .5s;
+    opacity: 1;
+}
+
+.close{
+    transform: translateY(-5px);
+    transition: .5s;
+    opacity: 0;
+}
+
+.expanse h2{
+    width: 100%;
+    margin: 70px 0 20px 0;
+    font: clamp(1.2rem, 5vw, 100px) Helvetica-light;
+}
+
+.expanse img{
+    width: 5%;
+    transition: .3s ease-in-out;
+    margin-top: 4px;
+    float: right
+}
+
+.expanse p{
+    font: 1rem Helvetica-light;
+    line-height: 1.4rem;
+    margin: 0;
+}

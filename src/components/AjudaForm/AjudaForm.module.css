@@ -1,0 +1,32 @@
+form{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica-light;
+}
+
+form label{
+    margin: 6px 0;
+}
+
+form input{
+    margin-bottom: 20px;
+    padding: 4px;
+    font: 1.1rem Helvetica-light;
+    border: 1px solid black;
+}
+
+form fieldset{
+    border: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+form fieldset input{
+    margin: 0;
+    margin-right: 6px;
+}
+
+form fieldset label{
+    margin-right: 15%;
+}
