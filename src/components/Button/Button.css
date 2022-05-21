@@ -1,8 +1,25 @@
-Button{
-    background: white;
-    border: 1px rgb(0, 0, 0) solid;
-    border-radius: 5px;
-    padding: 1rem 0;
+Button {
+  background: var(--main);
+  border: transparent;
+  border-radius: 5px;
+  padding: 1rem 0;
+  color: var(--fonteBright);
 
-    font: 1rem  Helvetica-Light;
+  font: 1rem Helvetica-Light;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+Button:hover {
+  background: var(--mainDark);
+}
+
+.clara {
+  color: var(--fonte);
+  background: white;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.clara:hover {
+  background: rgb(200, 200, 200);
 }

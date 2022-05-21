@@ -1,63 +1,63 @@
-.Produto{
-    height: 300px;
-    box-sizing: border-box;
+.Produto {
+  height: 300px;
+  box-sizing: border-box;
+  color: var(--fonte);
 }
 
-
-.Produto figure{
-    width: 50%;
-    height: 100%;
-    margin: 0;
-    float: left;
-    margin-bottom: 10px;
+.Produto figure {
+  width: 50%;
+  height: 90%;
+  margin: 0;
+  float: left;
+  margin-bottom: 10px;
 }
 
-.Produto figure img{
-    width: calc(100% - 30px);
-    height: 100%;
-    object-fit: contain;
+.Produto figure img {
+  width: calc(100% - 30px);
+  height: 100%;
+  object-fit: contain;
 }
 
-.Produto ul{
-    float: right;
-    width: 50%;
-    list-style: none; 
-    margin: 0;
-    height: 100%;
+.Produto ul {
+  float: right;
+  width: 50%;
+  list-style: none;
+  margin: 0;
+  height: 100%;
 }
 
-.Produto ul li{
-    margin: 12px 0;
-    font: 0.8rem Helvetica-light;
+.Produto ul li {
+  margin: 12px 0;
+  font: 0.8rem Helvetica-light;
 }
 
-.Produto ul h2{
-    margin-top: 0;
-    font: 1.3rem Helvetica-light;
+.Produto ul h2 {
+  margin-top: 0;
+  font: 1.3rem Helvetica-light;
 }
 
-.Produto ul h1{
-    font: 1.3rem Helvetica-bold;
-    margin: 0;
+.Produto ul h1 {
+  font: 1.3rem Helvetica-bold;
+  margin: 0;
 }
 
-.Produto ul button{
+.Produto ul button {
+  width: 100%;
+}
+
+@media (min-width: 875px) {
+  .Produto {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .Produto ul {
     width: 100%;
-}
+  }
 
-@media(min-width: 875px){
-    .Produto{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-
-    .Produto ul{
-        width: 100%;
-    }
-
-    .Produto figure{
-        float: none;
-        width: 100%;
-    }
+  .Produto figure {
+    float: none;
+    width: 100%;
+  }
 }

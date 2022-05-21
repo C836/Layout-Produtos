@@ -1,16 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import useWindowDimensions from "./../../utils/useWindowDimensions";
 
 import styles from "./Home.module.css";
 import up_arrow from "./../../assets/images/up-arrow.svg";
 
+import Enviado from "../../components/Enviado/Enviado";
 import Button from "../../components/Button/Button";
 import Form from "../../components/Form/Form";
 
-export default function Home() {
+export default function Home(props) {
+  const ajudeRef = useRef(null)
   const { height, width } = useWindowDimensions();
   const [details, setDetails] = useState([true, true]);
+
+  const executeScroll = (e) => {
+    switch(e.target.name){
+      case 'ajude':
+        ajudeRef.current.scrollIntoView({ behavior: 'smooth' })
+        break
+      case 'produtos':
+        props.produtos.current.scrollIntoView({ behavior: 'smooth' })
+        break
+      case 'compartilhe': 
+        props.compartilhe.current.scrollIntoView({ behavior: 'smooth' })
+        break
+    }
+  };
+
   const handleDetailsClick = (e) => {
     e.preventDefault();
     if (details[0] === true) {
@@ -22,6 +39,10 @@ export default function Home() {
       setDetails([true, true]);
     }
   };
+
+  useEffect(() => {
+    if (width > 850) setDetails([true, true]);
+  }, [width]);
 
   return (
     <div className={styles}>
@@ -36,15 +57,19 @@ export default function Home() {
           </p>
         </article>
         <nav>
-          <Button texto={"Conheça a Linx"} />
-          <Button texto={"Ajude o algorítimo"} />
-          <Button texto={"Seus produtos"} />
-          <Button texto={"Compartilhe"} />
+          {[
+            { valor: null, texto: "Conheça a Linx" },
+            { valor: "ajude", texto: "Ajude o algorítimo" },
+            { valor: "produtos", texto: "Seus produtos" },
+            { valor: "compartilhe", texto: "Compartilhe" },
+          ].map((item, index)=>(
+            <Button funcao={executeScroll} cor="clara" name={item.valor} texto={item.texto} />
+          ))}
         </nav>
       </header>
 
-      <section className={styles.expanse}>
-        <summary onClick={handleDetailsClick}>
+      <section ref={ajudeRef} className={styles.expanse}>
+        <summary onClick={width < 850 ? handleDetailsClick : null}>
           <h2>
             Ajude o algorítimo a ser mais certeiro{" "}
             <img
@@ -66,8 +91,10 @@ export default function Home() {
             lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad
             litora torquent per conubia nostra, per inceptos himenaeos.
             Vestibulum vel urna tortor. Vivamus et arcu non felis tristique
-            eleifend. 
-            <br/><br/>Morbi eu condimentum urna. Curabitur eu magna eget turpis
+            eleifend.
+            <br />
+            <br />
+            Morbi eu condimentum urna. Curabitur eu magna eget turpis
             condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar
             purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra.
             Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla

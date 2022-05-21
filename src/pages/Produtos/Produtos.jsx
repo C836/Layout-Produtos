@@ -7,7 +7,7 @@ import styles from "./Produtos.module.css";
 import arrow from "./../../assets/images/up-arrow.svg";
 import Divisor from "../../components/Divisor/Divisor";
 
-export default function Produtos() {
+export default function Produtos(props) {
   const [pagina, trocarPagina] = useState(0);
   const [produtos, atualizarProdutos] = useState({
     products: "",
@@ -33,7 +33,7 @@ export default function Produtos() {
   };
 
   return (
-    <div>
+    <div ref={props.refs}>
       <span style={{ display: produtos.loading ? "block" : "none" }}>
         <Loading />
       </span>

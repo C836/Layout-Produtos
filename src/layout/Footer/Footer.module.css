@@ -1,5 +1,5 @@
 .Footer {
-  color: rgb(255, 255, 255);
+  color: var(--fonteBright);
   z-index: 5;
   font: 1rem Helvetica-light;
   text-align: center;
@@ -9,7 +9,7 @@
 
   height: 250px;
   width: 100%;
-  background-color: rgb(68, 27, 95);
+  background-color: var(--main);
 
   clip-path: polygon(0% 20%, 0% 100%, 100% 100%, 100% 0%);
 

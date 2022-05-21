@@ -1,44 +1,51 @@
-*{
-    outline: 0;
-    padding: 0;
-    margin: 0
+:root {
+  --fonte: rgb(40, 40, 40);
+  --fonteBright: #fff;
+  --main: #503464;
+  --mainDark: #291c35;
 }
 
-.App{
-    display: flex;
-    flex-direction: column;
+* {
+  outline: 0;
+  padding: 0;
+  margin: 0;
 }
 
-.App main{
-    padding: 20px;
-    align-self: center;
-    max-width: 1200px;
-    z-index: 1;
+.App {
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
 }
 
-@media(min-width: 875px){
-    .App main{
-        padding: 80px;
-    }
+.App main {
+  padding: 20px;
+  align-self: center;
+  max-width: 1200px;
+  z-index: 1;
 }
 
-
-@font-face {
-    font-family: 'Helvetica-light';
-    src: url("./assets/fonts/HelveticaNeueLight.ttf");
-}
-
-@font-face {
-    font-family: 'Helvetica-thin';
-    src: url("./assets/fonts/HelveticaNeueThin.ttf");
+@media (min-width: 875px) {
+  .App main {
+    padding: 80px;
+  }
 }
 
 @font-face {
-    font-family: 'Helvetica-medium';
-    src: url("./assets/fonts/HelveticaNeueMedium.ttf");
+  font-family: "Helvetica-light";
+  src: url("./assets/fonts/HelveticaNeueLight.ttf");
 }
 
 @font-face {
-    font-family: 'Helvetica-bold';
-    src: url("./assets/fonts/HelveticaNeueBold.ttf");
+  font-family: "Helvetica-thin";
+  src: url("./assets/fonts/HelveticaNeueThin.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica-medium";
+  src: url("./assets/fonts/HelveticaNeueMedium.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica-bold";
+  src: url("./assets/fonts/HelveticaNeueBold.ttf");
 }
